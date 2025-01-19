@@ -69,7 +69,7 @@ for ((i=0; i<NUM_CONTAINERS; i++)); do
     sudo docker exec -i $CONTAINER_NAME bash <<EOF    
 apt update && apt upgrade -y && apt install -y wget net-tools iproute2 iptables && wget https://network3.io/ubuntu-node-v2.1.0.tar && tar -xvf ubuntu-node-v2.1.0.tar && cd ubuntu-node    
 EOF    
-        
+  
     if [ $? -eq 0 ]; then    
         echo "Instalasi di kontainer $CONTAINER_NAME berhasil."    
     else    
